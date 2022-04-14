@@ -332,16 +332,59 @@ $('#continue').click(function(){
 
 
 
-// *************** Shipping details ***********************
-//display
+// *************** DISPLAY CHECK OUT ***********************
 $('#shippingDetails').hide();
+$('#confirmation').hide();
+$('#shippingForm').hide();
+$('#orderConfirmation').hide();
+// payment -> billing
+$('.paymentButton').click(function(){
+  $('#payment').hide();
+  $('#orderConfirmation').hide();
+  $('#shippingForm').hide();
+  $('#billingForm').show(500);
+});
+// billing -> shipping
+$('.billingButton').click(function(){
+  $('#billingForm').hide();
+  $('#orderConfirmation').hide();
+  $('#shippingDetails').hide();
+  $('#confirmation').hide();
+  $('#payment').hide();
+  $('#orderConfirmation').hide();
+  $('#shippingForm').show(500);
+});
+//shipping -> same detail details
 $('#sameDetails').change(function(){
  if ($('#sameDetails').prop("checked") == false){
     $('#shippingDetails').hide();
-  } else {
-    $('#shippingDetails').show();
+    
+ }else {
+    $('#shippingDetails').show(500);
+    $('#confirmation').hide();
   }
 });
+// go back 
+$('.orderReview').click(function(){
+  $('#shippingForm').hide();
+  $('#payment').hide();
+  $('#shippingDetails').hide();
+  $('#confirmation').hide();
+  $('#shippingForm').hide();
+  $('#billingForm').hide();
+  $('#orderConfirmation').show(500);
+});
+$('.paymentMethodButton').click(function(){
+  $('#billingForm').hide();
+  $('#shippingDetails').hide();
+  $('#confirmation').hide();
+  $('#shippingForm').hide();
+  $('#orderConfirmation').hide();
+  $('#payment').show(500);
+});
+
+// **********************************  END CHECK OUT *******************************
+
 
 $('#firstName').change(function(){
     
@@ -379,3 +422,4 @@ $('#BPostalCode').change(function(){
     console.log(" Valid code.")
   }
 });
+

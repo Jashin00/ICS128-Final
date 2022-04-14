@@ -30,14 +30,17 @@
             </div>
             <div class="modal-body">
               <div class="row">
-                <div class="col-md-4">
-                  <button type="button" class="btn btn-primary">Billing Details</button>
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary paymentMethodButton" >Payment method</button>
                 </div>
-                <div class="col-md-4">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  id="">Shipping Details</button>    
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary paymentButton"  >Billing Details</button>    
                 </div>
-                <div class="col-md-4">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="">Order Confirmation</button>
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary billingButton"   id="">Shipping Details</button>    
+                </div>
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary orderReview"  id="">Order Confirmation</button>
                 </div>
               </div>
               <form id="payment">
@@ -89,31 +92,17 @@
                     </div>
                   </div>  <!--row end-->
                   <!--Payment method form END-->
-                  </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#billingAddress" id="continue" >Continue</button>
+                    <button type="button" class="btn btn-primary paymentButton">Continue</button>
                   </div>
+                  </div>
+                  
                         
               </form>
-            </div>   
-          </div>
-        </div>
-          <!-- end modal -->
-      </div>
-      <!-- billing address START-->
-      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
-      <div class="modal fade" id="billingAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" >
+              <!-- billing address START-->
               <form id="billingForm">
                 <div class="mb-3" >
                   <h3>Billing Information</h3>
-                  
                 </div>
                   <div class="row">
                       <!--row billing form-->
@@ -230,26 +219,15 @@
                       <input type="text" class="form-control" id="BEmail" placeholder="example@gmail.com">
                     </div>
                   </div> <!-- row end-->
+                
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary billingButton" >Continue</button>
+                  </div>
               </form>
-            </div>
+      <!-- *********************************Billing End ***************************************** -->
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#shippingAddress" >Continue</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- *********************************temp Shipping address ***************************************** -->
-      <div class="modal fade" id="shippingAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" >
-              <form id="billingForm">
+       <!-- ********************************* Shipping Form Start ***************************************** -->
+              <form id="shippingForm">
                 <div class="mb-3" >
                   <h3>Shipping Information</h3>
                   <div id="sameAddress">
@@ -363,19 +341,43 @@
                       <label for="S-PostalCode" class="col-form-label" >Postal Code/ZIP</label>
                       <input type="text" class="form-control" id="BPostalCode" placeholder="23688 /V8V 2C3">
                     </div>
-                  
+                   
                   </div> <!-- row end-->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary orderReview">Continue</button>
+                  </div>   
               </form>
+                <!-- ********************************* Shipping Form END ***************************************** -->
+              <!-- ********************************* order Confirmation Form Start ***************************************** -->
+              <div id="orderConfirmation">
+                <div class="mb-3" >
+                  <h2>Order Details</h2>
+                  <br>
+                  <table id="orderDetails">
+                    <tr>
+                      <th>Item</th>
+                      <th>Qty</th>
+                      <th>Price</th>
+                      <th>Total</th>
+                    </tr>
+                  </table>
+                  <!--orderConfirmation form-->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary orderReview">Order Now</button>
+                  </div>   
+                    
+                </div>     
+              </div> 
+              <!-- ********************************* order Confirmation Form END ***************************************** -->
             </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Continue</button>
-            </div>
+            </div>   
           </div>
         </div>
+          <!-- end modal -->
       </div>
-
-
+      
+  
+  
 
       <div id="cards">
       <!-- <div class="card">
