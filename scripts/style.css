@@ -1,0 +1,87 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+}
+/* 
+ #month{
+  width: 50px;
+} */
+ /* #year {
+
+} */ */
+#cardNumbers{
+  width: 100px;
+}
+
+#SecurityCode */
+#empty{
+  text-align: center;
+  font-family: sans-serif;
+  font-size:1.2rem;
+  padding-left: 5em;
+}
+#cards{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card{
+  width:28%;
+  /* box-shadow: 0 0 4px 3px; */
+  text-align: center;
+  padding:1.5em;
+  margin-bottom: 2em;
+  
+}
+.images{
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title{
+  font-size:1.3rem;
+}
+.price{
+  font-weight: bold;
+  text-transform: capitalize;
+  margin:1em;
+  font-size:1.2rem;
+}
+.add-to-cart{
+  text-align: left;
+  background-color: olive;
+  width:35%;
+}
+
+#currency{
+ width: 100%;
+}
+
+.empty-cart{
+  background-color:  yellow;
+  
+}
+.remove {
+  max-width: 15px;
+}
+.check-out{
+  background-color:  green;
+}
+th{
+  text-align: left;
+  padding: 20px;
+ 
+  font-family: sans-serif;
+}
+
+td{
+   padding: 10px 10px;
+}
+
+td input{
+  width: 40px;
+  height:30px;
+  padding: 5px;
+}
