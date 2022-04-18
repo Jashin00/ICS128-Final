@@ -13,7 +13,12 @@
 #cardNumbers{
   width: 100px;
 }
-
+.prevent-click {
+  pointer-events: none;
+}
+span {
+  color: red;
+}
 #SecurityCode */
 #empty{
   text-align: center;
@@ -76,12 +81,33 @@ th{
   font-family: sans-serif;
 }
 
-td{
+/* td{
    padding: 10px 10px;
+} */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
+#orderDetails {
+  border-collapse: collapse;
+  width: 100%;
+}
+.remove{
+  padding: 2px;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+
+}
 td input{
   width: 40px;
   height:30px;
   padding: 5px;
+}
+
+.subtotalC{
+  text-align: left;
+  padding: 8px;
 }
